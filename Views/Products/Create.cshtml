@@ -6,22 +6,28 @@
 }
 <div class="headStuff">
     <h3>Create a New Product</h3>
-    @using (Html.BeginForm())
-    {
-        @Html.LabelFor(model => model.Name)
-        @Html.TextBoxFor(model => model.Name)
+    <form method="post" asp-action="Create" asp-controller="Products" enctype="multipart/form-data">
+        <label for="name">Product Name</label>
+        <input type="text" id="name" name="name" required />
+        <br />
+        <label for="price">Price</label>
+        <input type="number" step="0.01" id="price" name="price" required />
+        <br />
+        <label for="origin">Origin</label>
+        <input type="number" step="0.01" id="origin" name="origin" required />
+        <br />
+        <div class="centerIt">
+            <label for="picture">Image</label>
+            <input type="file" id="picture" name="picture" />
+        </div>
+        <br />
+        <button class="btn waves-effect" type="submit">Create</button>
 
-
-        @Html.LabelFor(model => model.Price)
-        @Html.TextBoxFor(model => model.Price)
-
-        @Html.LabelFor(model => model.Origin)
-        @Html.TextBoxFor(model => model.Origin)
-
+        </form>
         <input type="submit" value="Add New Product!" />
-    }
+        }
 
-    <hr />
+        <hr />
 
-    <p>@Html.ActionLink("Back to Product List", "Index")</p>
+        <p>@Html.ActionLink("Back to Product List", "Index")</p>
 </div>

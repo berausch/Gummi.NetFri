@@ -4,28 +4,30 @@
     ViewData["Title"] = "Edit Product";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<h3 class="headStuff">Edit Product</h3>
-
-<h3 class="headStuff">@Html.DisplayFor(model => model.Name)</h3>
 <div class="headStuff">
-    @using (Html.BeginForm())
-    {
-        @Html.HiddenFor(model => model.ProductId)
+    <h3 class="headStuff">Edit Product</h3>
 
-        @Html.LabelFor(model => model.Name)
-        @Html.EditorFor(model => model.Name)
+    <h3 class="headStuff">@Html.DisplayFor(model => model.Name)</h3>
 
-        @Html.LabelFor(model => model.Price)
-        @Html.EditorFor(model => model.Price)
+    <form method="post" asp-action="Create" asp-controller="Products" enctype="multipart/form-data">
+        <input type="hidden" name="ProductId" id="ProductId" value="@Model.ProductId" />
+        <label for="name">Product Name</label>
+        <input type="text" id="name" name="name" placeholder="@Model.Name"  required />
+        <br />
+        <label for="price">Price</label>
+        <input type="number" step="0.01" id="price" name="price" placeholder="@Model.Price" required  />
+        <br />
+        <label for="name">Country of Origin</label>
+        <input type="text" id="origin" name="origin" placeholder="@Model.Origin"  required />
+        <br />
 
-        @Html.LabelFor(model => model.Origin)
-        @Html.EditorFor(model => model.Origin)
+        <label class="labely" for="picture">Image</label>
+        <input type="file" id="Image" value="@Model.Image" name="image"/>
+        <br />
+        <button class="btn waves-effect" type="submit">Update</button>
+    </form>
 
-        <input type="submit" value="Save" />
-    }
-
-    <hr/>
+    <hr />
 
     <p>@Html.ActionLink("Back to Product Details", "Details", new { id = Model.ProductId })</p>
     <p>@Html.ActionLink("Back to Product List", "Index")</p>

@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Gummi.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Http;
+using System.IO;
 
 namespace Gummi.Controllers
 {
@@ -30,9 +31,20 @@ namespace Gummi.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(Product product, IFormFile image)
+        public IActionResult Create(string name, decimal price, string origin, IFormFile image)
         {
-            db.Products.Add(product);
+            byte[] imageArray = new byte[0];
+            if (image.Length > 0)
+            {
+                using (Stream fileStream = image.OpenReadStream())
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    fileStream.CopyTo(ms);
+                    imageArray = ms.ToArray();
+                }
+            }
+            Product newProduct = new Product(name, price, origin, imageArray); 
+            db.Products.Add(newProduct);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
@@ -44,11 +56,23 @@ namespace Gummi.Controllers
         }
 
         [HttpPost]
-        public IActionResult Edit(Product product)
+        public IActionResult Edit(string ProductId, string name, decimal price, string origin, IFormFile image)
         {
-            db.Entry(product).State = EntityState.Modified;
+            byte[] imageArray = new byte[0];
+            if (image.Length > 0)
+            {
+                using (Stream fileStream = image.OpenReadStream())
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    fileStream.CopyTo(ms);
+                    imageArray = ms.ToArray();
+                }
+            }
+            Product newProduct = new Product(name, price, origin, imageArray);
+            newProduct.ProductId = int.Parse(ProductId);
+            db.Entry(newProduct).State = EntityState.Modified;
             db.SaveChanges();
-            return RedirectToAction("Details", new { id = product.ProductId });
+            return RedirectToAction("Details", new { id = newProduct.ProductId });
         }
 
         public IActionResult Delete(int id)

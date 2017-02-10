@@ -10,6 +10,18 @@ namespace Gummi.Models
     [Table("Products")]
     public class Product
     {
+        public Product()
+        {
+        }
+
+        public Product(string name, decimal price, string origin, byte[] image)
+        {
+            Name = name;
+            Price = price;
+            Origin = origin;
+            Image = image;
+        }
+
         [Key]
         public int ProductId { get; set; }
         public string Name { get; set; }
