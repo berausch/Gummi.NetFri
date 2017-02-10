@@ -18,5 +18,6 @@ namespace Gummi.Models
         public decimal Price { get; set; }
 
         public string Origin { get; set; }
+
     }
 }

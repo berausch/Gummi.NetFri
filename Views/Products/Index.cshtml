@@ -1,0 +1,16 @@
+﻿@{ 
+    ViewData["Title"] = "Products";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model IEnumerable<Gummi.Models.Product>
+
+<h3>Gummi Bear Kingdom's</h3>
+<h3>Sweet Subjects</h3>
+
+@foreach(var prod in Model)
+{
+    <p>@Html.ActionLink(prod.Name, "Details", new { id = prod.ProductId })</p>
+}
+
+<h4>@Html.ActionLink("Create New Product", "Create")</h4>

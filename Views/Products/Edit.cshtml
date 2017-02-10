@@ -1,0 +1,31 @@
+﻿@model Gummi.Models.Product
+
+@{
+    ViewData["Title"] = "Edit Product";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>Edit Product</h3>
+
+<h3>@Html.DisplayFor(model => model.Name)</h3>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.ProductId)
+
+    @Html.LabelFor(model => model.Name)
+    @Html.EditorFor(model => model.Name)
+
+    @Html.LabelFor(model => model.Price)
+    @Html.EditorFor(model => model.Price)
+
+    @Html.LabelFor(model => model.Origin)
+    @Html.EditorFor(model => model.Origin)
+
+    <input type="submit" value="Save"/>
+}
+
+
+<p>@Html.ActionLink("Back to Product Details", "Details", new { id = Model.ProductId })</p>
+<p>@Html.ActionLink("Back to Product List", "Index")</p>
+

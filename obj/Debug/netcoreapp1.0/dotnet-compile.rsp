@@ -1,5 +1,5 @@
---temp-output:C:\Users\epicodus\Documents\Visual Studio 2015\Projects\Gummi\src\Gummi\obj\Debug\netcoreapp1.0\
---out:C:\Users\epicodus\Documents\Visual Studio 2015\Projects\Gummi\src\Gummi\bin\Debug\netcoreapp1.0\Gummi.dll
+--temp-output:c:\Users\epicodus\documents\visual studio 2015\Projects\Gummi\src\Gummi\obj\Debug\netcoreapp1.0\
+--out:c:\Users\epicodus\documents\visual studio 2015\Projects\Gummi\src\Gummi\bin\Debug\netcoreapp1.0\Gummi.dll
 --define:DEBUG
 --define:TRACE
 --define:NETCOREAPP1_0
@@ -195,12 +195,13 @@
 --reference:C:\Users\epicodus\.nuget\packages\System.Threading.Timer\4.0.1\ref\netstandard1.2\System.Threading.Timer.dll
 --reference:C:\Users\epicodus\.nuget\packages\System.Xml.ReaderWriter\4.0.11\ref\netstandard1.3\System.Xml.ReaderWriter.dll
 --reference:C:\Users\epicodus\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll
---resource:"C:\Users\epicodus\Documents\Visual Studio 2015\Projects\Gummi\src\Gummi\obj\Debug\netcoreapp1.0\Gummidotnet-compile.deps.json",Gummi.deps.json
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\Gummi\src\Gummi\Program.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\Gummi\src\Gummi\Startup.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\Gummi\src\Gummi\Controllers\HomeController.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\Gummi\src\Gummi\Migrations\20170210172930_Initial.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\Gummi\src\Gummi\Migrations\20170210172930_Initial.Designer.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\Gummi\src\Gummi\Migrations\GummiContextModelSnapshot.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\Gummi\src\Gummi\Models\GummiContext.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\Gummi\src\Gummi\Models\Product.cs
+--resource:"c:\Users\epicodus\documents\visual studio 2015\Projects\Gummi\src\Gummi\obj\Debug\netcoreapp1.0\Gummidotnet-compile.deps.json",Gummi.deps.json
+c:\Users\epicodus\documents\visual studio 2015\Projects\Gummi\src\Gummi\Program.cs
+c:\Users\epicodus\documents\visual studio 2015\Projects\Gummi\src\Gummi\Startup.cs
+c:\Users\epicodus\documents\visual studio 2015\Projects\Gummi\src\Gummi\Controllers\HomeController.cs
+c:\Users\epicodus\documents\visual studio 2015\Projects\Gummi\src\Gummi\Controllers\ProductsController.cs
+c:\Users\epicodus\documents\visual studio 2015\Projects\Gummi\src\Gummi\Migrations\20170210172930_Initial.cs
+c:\Users\epicodus\documents\visual studio 2015\Projects\Gummi\src\Gummi\Migrations\20170210172930_Initial.Designer.cs
+c:\Users\epicodus\documents\visual studio 2015\Projects\Gummi\src\Gummi\Migrations\GummiContextModelSnapshot.cs
+c:\Users\epicodus\documents\visual studio 2015\Projects\Gummi\src\Gummi\Models\GummiContext.cs
+c:\Users\epicodus\documents\visual studio 2015\Projects\Gummi\src\Gummi\Models\Product.cs
