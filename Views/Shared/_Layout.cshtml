@@ -5,17 +5,22 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     <link  rel="stylesheet" type="text/css" href="~/css/bootstrap.css" />
+    <link href="~/css/styles.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <div class="container">
         <div class="jumbotron">
-            <h1 id="logo"> Gummi Bear Kingdom</h1>
-            <h3>Where Sweets Rule</h3>
-            <h4>@Html.ActionLink("Home", "Index", "Home", null )</h4>
-        </div>    
-    </div>
-    <div>
-        @RenderBody()
+            <div class="jumboInside">
+                <h1 id="logo"> Gummi Bear Kingdom</h1>
+                <h2 class="underLogo">Where Sweets Rule</h2>
+                <hr />
+                <h4>@Html.ActionLink("Home", "Index", "Home", null)</h4>
+            </div>
+        </div>
+        
+        <div >
+            @RenderBody()
+        </div>
     </div>
 </body>
 </html>

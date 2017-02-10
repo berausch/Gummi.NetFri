@@ -19,5 +19,6 @@ namespace Gummi.Models
 
         public string Origin { get; set; }
 
+        public byte[] Image { get; set; } 
     }
 }

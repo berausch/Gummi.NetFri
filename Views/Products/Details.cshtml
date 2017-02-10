@@ -5,17 +5,17 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h3>@Html.DisplayFor(model => model.Name)</h3>
+<h2 class="headStuff">@Html.DisplayFor(model => model.Name)</h2>
 
-<h5>Price: $@Html.DisplayFor(model => model.Price)/Bag *</h5>
-<h5>Origin: @Html.DisplayFor(model => model.Origin)</h5>
+<h4 class="headStuff">Price: $@Html.DisplayFor(model => model.Price)/Bag *</h4>
+<h4 class="headStuff">Origin: @Html.DisplayFor(model => model.Origin)</h4>
 
-<p>*Bag contains 100 Gummi Bears</p>
+<p class="headStuff">*Bag contains 100 Gummi Bears</p>
 <hr />
 
-<h4>@Html.ActionLink("Edit Product", "Edit", new { id = Model.ProductId })</h4>
-<h4>@Html.ActionLink("Remove Product", "Delete", new { id = Model.ProductId })</h4>
+<h5 class="headStuff">@Html.ActionLink("Edit Product", "Edit", new { id = Model.ProductId })</h5>
+<h5 class="headStuff">@Html.ActionLink("Remove Product", "Delete", new { id = Model.ProductId })</h5>
 
 <hr/>
-<p>@Html.ActionLink("Back to Product List", "Index")</p>
+<p class="headStuff">@Html.ActionLink("Back to Product List", "Index")</p>
 

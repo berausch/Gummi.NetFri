@@ -5,12 +5,15 @@
 
 @model IEnumerable<Gummi.Models.Product>
 
-<h3>Gummi Bear Kingdom's</h3>
-<h3>Sweet Subjects</h3>
+<h2 class="headStuff">Gummi Bear Kingdom's</h3class="headStuff">
+<h2 class="headStuff">Sweet Subjects</h2>
 
-@foreach(var prod in Model)
-{
-    <p>@Html.ActionLink(prod.Name, "Details", new { id = prod.ProductId })</p>
-}
+    <div class="headStuff">
+        @foreach (var prod in Model)
+        {
+            <h4>@Html.ActionLink(prod.Name, "Details", new { id = prod.ProductId })</h4>
+        }
 
-<h4>@Html.ActionLink("Create New Product", "Create")</h4>
+        <hr/>
+        <h5>@Html.ActionLink("Create New Product", "Create")</h5>
+    </div>

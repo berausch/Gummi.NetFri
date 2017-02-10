@@ -5,27 +5,29 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h3>Edit Product</h3>
+<h3 class="headStuff">Edit Product</h3>
 
-<h3>@Html.DisplayFor(model => model.Name)</h3>
+<h3 class="headStuff">@Html.DisplayFor(model => model.Name)</h3>
+<div class="headStuff">
+    @using (Html.BeginForm())
+    {
+        @Html.HiddenFor(model => model.ProductId)
 
-@using (Html.BeginForm())
-{
-    @Html.HiddenFor(model => model.ProductId)
+        @Html.LabelFor(model => model.Name)
+        @Html.EditorFor(model => model.Name)
 
-    @Html.LabelFor(model => model.Name)
-    @Html.EditorFor(model => model.Name)
+        @Html.LabelFor(model => model.Price)
+        @Html.EditorFor(model => model.Price)
 
-    @Html.LabelFor(model => model.Price)
-    @Html.EditorFor(model => model.Price)
+        @Html.LabelFor(model => model.Origin)
+        @Html.EditorFor(model => model.Origin)
 
-    @Html.LabelFor(model => model.Origin)
-    @Html.EditorFor(model => model.Origin)
+        <input type="submit" value="Save" />
+    }
 
-    <input type="submit" value="Save"/>
-}
+    <hr/>
 
+    <p>@Html.ActionLink("Back to Product Details", "Details", new { id = Model.ProductId })</p>
+    <p>@Html.ActionLink("Back to Product List", "Index")</p>
 
-<p>@Html.ActionLink("Back to Product Details", "Details", new { id = Model.ProductId })</p>
-<p>@Html.ActionLink("Back to Product List", "Index")</p>
-
+</div>

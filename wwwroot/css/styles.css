@@ -1,1 +1,33 @@
 ﻿
+
+#logo {
+    font-family:  'Javanese Text';
+    color:  #e8a043;
+    text-shadow: 4px 4px 4px #ecf2a9;
+}
+.underLogo{
+    font-family:  'Javanese Text';
+    color:  #e8a043;
+    text-shadow: 1px 1px white;
+}
+
+.jumbotron {
+    background-color: #42f4d9;  
+    padding: 20px; 
+    text-align: center;
+    height: 250px;
+}
+.jumboInside {
+    border: 5px dashed white;
+    border-radius: 200px 10px; 
+    height: 155px;
+    width: 100%;
+}
+.headStuff {
+    color: #b77c1d;
+     font-family:  'Javanese Text';
+     text-align: center;
+}
+body {
+    background-color: #c4efe9;
+}

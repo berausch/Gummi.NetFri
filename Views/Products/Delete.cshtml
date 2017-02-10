@@ -4,16 +4,16 @@
     ViewData["Title"] = "Delete Product";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<div class="headStuff">
+    <h3>Are you sure you want to Delete @Html.DisplayFor(model => model.Name)?</h3>
 
-<h3>Are you sure you want to Delete @Html.DisplayFor(model => model.Name)?</h3>
-
-@using (Html.BeginForm())
-{
+    @using (Html.BeginForm())
+    {
     <input type="submit" value="Delete" />
-}
-<hr />
+    }
+    <hr />
 
-<p>@Html.ActionLink("Back to Product Details", "Details", new { id = Model.ProductId })</p>
-<p>@Html.ActionLink("Back to Product List", "Index")</p>
+    <p>@Html.ActionLink("Back to Product Details", "Details", new { id = Model.ProductId })</p>
+    <p>@Html.ActionLink("Back to Product List", "Index")</p>
 
-
+</div>

@@ -4,21 +4,24 @@
     ViewData["Title"] = "Create New Product";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<div class="headStuff">
+    <h3>Create a New Product</h3>
+    @using (Html.BeginForm())
+    {
+        @Html.LabelFor(model => model.Name)
+        @Html.TextBoxFor(model => model.Name)
 
-<h3>Create a New Product</h3>
-@using (Html.BeginForm())
-{
-    @Html.LabelFor(model => model.Name)
-    @Html.TextBoxFor(model => model.Name)
 
+        @Html.LabelFor(model => model.Price)
+        @Html.TextBoxFor(model => model.Price)
 
-    @Html.LabelFor(model => model.Price)
-    @Html.TextBoxFor(model => model.Price)
+        @Html.LabelFor(model => model.Origin)
+        @Html.TextBoxFor(model => model.Origin)
 
-    @Html.LabelFor(model => model.Origin)
-    @Html.TextBoxFor(model => model.Origin)
+        <input type="submit" value="Add New Product!" />
+    }
 
-    <input type="submit" value="Add New Product!"/>
-}
+    <hr />
 
-<p>@Html.ActionLink("Back to Product List", "Index")</p>
+    <p>@Html.ActionLink("Back to Product List", "Index")</p>
+</div>
