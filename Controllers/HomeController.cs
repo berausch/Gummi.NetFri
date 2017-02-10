@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Gummi.Models;
 
-// For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace Gummi.Controllers
 {
     public class HomeController : Controller
     {
+
+        private GummiContext db = new GummiContext();
         public IActionResult Index()
         {
             return View();
