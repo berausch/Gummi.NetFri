@@ -10,12 +10,12 @@ _{This is a .Net exercise made for Epicodus that was made for the client "Gummi 
 
 ## Setup/Installation Requirements
 
-* _Go to https://github.com/berausch/qanda-ember-friday2
+* _Go to https://github.com/berausch/Gummi.NetFri
 * _Clone the repository
 * _Open the project in Visual Studio
 * _Open your terminal and navigate to Visual Studio, and then Projects\Gummi\src\Gummi 
 * _Run the Following Command:
-* _   dotnet ef database update 20170210220605_Images2
+* _   dotnet ef database update
 * _Start the project by clicking the green arrow with the words IIS Express
 * _Check out the website!
 
